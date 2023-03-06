@@ -1,9 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 using Persistence.Context;
+using Persistence.Models;
 using System.Linq.Expressions;
 
 namespace Persistence.Repositories;
-public class GenericRepository<T> where T : class
+public class GenericRepository<T> where T : BaseEntity
 {
     protected ApplicationDbContext _context;
     protected DbSet<T> _dbSet;
